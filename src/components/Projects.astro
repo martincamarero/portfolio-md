@@ -1,0 +1,42 @@
+---
+const PROJECTS = [
+  {
+    title: "App Web para la Gestión de las Instalaciones deportivas de Quismondo",
+    description:
+      "Permite a los usuarios registrarse, reservar pistas y gestionar sus reservas, además de enviar la confirmación de la cita por correo al usuario. Desarrollada con Node.js, PostgreSQL, HTML, CSS y Javascript.",
+    image: "/projects/project1.PNG",
+  },
+  {
+    title: "App Web para la Automatización de Descargas de PDFs presentada a Serveo",
+    description:
+      "Plataforma web que permite a los usuarios automatizar la descarga de archivos PDFs de la Plataforma de Licitaciones del Estado. Desarrollada con Selenium, Node.js, Express, HTML, CSS y Turso.",
+    image: "/projects/project2.PNG",
+  },
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description }) => (
+      <article class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 group">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center overflow-hidden rounded-xl shadow-xl transition duration-500 ease-in-out transform md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              src={image}
+              alt={title}
+              loading="lazy"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <p class="mt-2 text-gray-700 dark:text-gray-400">{description}</p>
+        </div>
+      </article>
+    ))
+  }
+</div>

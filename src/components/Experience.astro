@@ -1,0 +1,38 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+  date: "Mayo 2025 - Junio 2025",
+  title: "Full Stack Developer (Prácticas)",
+  company: "Impacto Tecnológico",
+  description:
+    "Realicé mis prácticas en la empresa Impacto Tecnológico, donde desarrollé un gestor de tareas utilizando React, Redux, Node.js y MongoDB. Durante este período también adquirí experiencia con servicios de AWS y reforcé buenas prácticas en el uso de Git y trabajo colaborativo.",
+},
+
+  {
+  date: "Octubre 2021 - Septiembre 2024",
+  title: "Mozo de Almacén",
+  company: "Protega Mayoristas",
+  description:
+    "Aunque no pertenece directamente al ámbito de la programación, esta experiencia me permitió desarrollar habilidades esenciales como el trabajo en equipo, la comunicación con clientes y compañeros, la gestión del tiempo y la capacidad para mantener la constancia y el esfuerzo físico en entornos exigentes.",
+},
+
+  {
+  date: "Junio 2021 - Septiembre 2021",
+  title: "Ayudante de Cocina y Sala",
+  company: "Restaurante de Zamorano",
+  description:
+    "Aunque no está relacionado con la programación, esta experiencia me permitió desarrollar habilidades como trabajo bajo presión, coordinación en equipo, atención al cliente y capacidad de adaptación rápida a distintos roles y tareas en un entorno dinámico.",
+}
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
